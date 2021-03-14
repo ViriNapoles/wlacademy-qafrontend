@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ViriNapoles/wlacademy-qafrontend/issues"
   },
-  "homepage": "https://github.com/ViriNapoles/wlacademy-qafrontend#readme"
+  "homepage": "https://github.com/ViriNapoles/wlacademy-qafrontend#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
