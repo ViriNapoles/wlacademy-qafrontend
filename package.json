@@ -1,0 +1,19 @@
+{
+  "name": "wlacademy-qafrontend",
+  "version": "1.0.0",
+  "description": "Assesment 1 - TestCafe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViriNapoles/wlacademy-qafrontend.git"
+  },
+  "author": "viri_napoles@hotmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViriNapoles/wlacademy-qafrontend/issues"
+  },
+  "homepage": "https://github.com/ViriNapoles/wlacademy-qafrontend#readme"
+}
