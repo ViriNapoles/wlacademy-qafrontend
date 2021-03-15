@@ -7,8 +7,6 @@ class LoginPage {
         this.passwordField = Selector('input[name="password"]')
         this.loginButton = Selector('.login-box form input[class="btn_action"]')
         this.errorMessage = Selector('h3[data-test="error"]')
-        this.burgerButton = Selector('#react-burger-menu-btn')
-        this.burgerMenu = Selector('bm-menu-wrap a[#"logout_sidebar_link"]')
     }
 
     async userLogin(username, password) {
