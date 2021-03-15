@@ -10,6 +10,9 @@ class ProductsPage {
         this.burgerButton = Selector('#react-burger-menu-btn')
         this.burgerLogout = Selector('.bm-menu-wrap a[id="logout_sidebar_link"]').withText('Logout')
         this.itemButton01 = Selector('.inventory_item .pricebar .btn_inventory').nth(0)
+        this.itemButton02 = Selector('.inventory_item .pricebar .btn_inventory').nth(1)
+        this.itemButton03 = Selector('.inventory_item .pricebar .btn_inventory').nth(2)
+        
     }
 
     async logoutUser() {
