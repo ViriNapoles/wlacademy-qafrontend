@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test-chrome-all": "testcafe chrome ./page_model/test",
-    "test-chrome-all-json-reporter": "testcafe chrome ./page_model/test --reporter json > report.json"
-  
+    "test-chrome-all-json-reporter": "testcafe chrome ./page_model/test --reporter json > report.json",
+    "test-multiple-browsers": "testcafe safari,chrome ./page_model/test",
+    "test-safari-all": "testcafe safari ./page_model/test"
   },
   "repository": {
     "type": "git",
