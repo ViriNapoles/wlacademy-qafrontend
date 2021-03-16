@@ -13,9 +13,10 @@ class CheckOutInformation{
 
     async fillUserInformation(name, lastname, zipcode){
         if(name){
-            await t.typeText(this.firstnameField, name)
-            await t.typeText(this.lastnameField, lastname)
-            await t.typeText(this.zipCodeField, zipcode)
+            await t
+                .typeText(this.firstnameField, name)
+                .typeText(this.lastnameField, lastname)
+                .typeText(this.zipCodeField, zipcode)
         }
         await t.click(this.continueButton)
     }

@@ -4,12 +4,13 @@ import CheckOutInformation from '../pages/CheckOutInformationPage'
 import CheckOutOverview from '../pages/CheckOutOverviewPage'
 import FinishedPurchase from '../pages/FinishPage'
 import { validUser } from '../data/Roles'
+import { BASE_URL } from '../data/Constants'
 
 fixture('Checkout information fields')
     .beforeEach(async t =>{
         await t.useRole(validUser)
         await ProductsPage.addItem(0)
-        await t.navigateTo('https://www.saucedemo.com/cart.html')
+        await t.navigateTo(`${BASE_URL}/cart.html`)
     })
 
 test('Validate items in cart and overview', async t =>{
@@ -20,6 +21,7 @@ test('Validate items in cart and overview', async t =>{
 
 test('Complete a purchase', async t =>{
     await CheckOutOverview.validateItem(0)
-    await t.click(CheckOutOverview.finishButton)
-    await t.expect(FinishedPurchase.pageTitle.exists).ok()
+    await t
+        .click(CheckOutOverview.finishButton)
+        .expect(FinishedPurchase.pageTitle.exists).ok()
 })

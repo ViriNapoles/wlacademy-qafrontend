@@ -1,4 +1,5 @@
 import { Selector, t } from 'testcafe'
+import LoginPage from './LoginPage'
 
 export const ADD_LABEL = 'ADD TO CART'
 export const REMOVE_LABEL = 'REMOVE'
@@ -13,9 +14,11 @@ class ProductsPage {
     }
 
     async logoutUser() {
-        await t.expect(this.pageTitle.exists).ok()
-        await t.click(this.burgerButton)
-        await t.click(this.burgerLogout)
+        await t
+            .expect(this.pageTitle.exists).ok()
+            .click(this.burgerButton)
+            .click(this.burgerLogout)
+            .expect(LoginPage.pageTitle.exists).ok()
     }
 
     async addItem(itemPosition) {

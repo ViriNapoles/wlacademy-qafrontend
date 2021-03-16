@@ -1,4 +1,5 @@
 import {Selector, t} from 'testcafe'
+import { BASE_URL } from '../data/Constants'
 import ShoppingCart from '../pages/ShoppingCartPage'
 
 class CheckOutOverview{
@@ -11,10 +12,11 @@ class CheckOutOverview{
     }
     
     async validateItem(itemPosition){
-        await t.navigateTo('https://www.saucedemo.com/cart.html')
+        await t.navigateTo(`${BASE_URL}/cart.html`)
         const itemName = await ShoppingCart.itemName.nth(itemPosition).innerText
-        await t.navigateTo('https://www.saucedemo.com/checkout-step-two.html')
-        await t.expect(this.overviewItemName.nth(itemPosition).innerText).contains(itemName)
+        await t
+            .navigateTo(`${BASE_URL}/checkout-step-two.html`)
+            .expect(this.overviewItemName.nth(itemPosition).innerText).contains(itemName)
     }
 }
 

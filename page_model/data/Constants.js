@@ -11,4 +11,7 @@ const CREDENTIALS = {
         PASSWORD: process.env.INVALID_USER_PASSWORD
     },
 }
+
+export const BASE_URL = 'https://www.saucedemo.com'
+
 export default CREDENTIALS

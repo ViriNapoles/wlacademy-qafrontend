@@ -3,14 +3,16 @@ import ShoppingCart from '../pages/ShoppingCartPage'
 import CheckOutInformation from '../pages/CheckOutInformationPage'
 import CheckOutOverview from '../pages/CheckOutOverviewPage'
 import { validUser } from '../data/Roles'
+import { BASE_URL } from '../data/Constants'
 
 fixture('Checkout information fields')
     .beforeEach(async t =>{
         await t.useRole(validUser)
         await ProductsPage.addItem(0)
-        await t.navigateTo('https://www.saucedemo.com/cart.html')
-        await t.expect(ShoppingCart.pageTitle.exists).ok()
-        await t.click(ShoppingCart.checkoutButton)
+        await t
+            .navigateTo(`${BASE_URL}/cart.html`)
+            .expect(ShoppingCart.pageTitle.exists).ok()
+            .click(ShoppingCart.checkoutButton)
     })
 
 test('Missing information chekout message', async t =>{
