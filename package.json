@@ -4,7 +4,9 @@
   "description": "Assesment 1 - TestCafe",
   "main": "index.js",
   "scripts": {
-    "test-chrome-all": "testcafe chrome ./page_model/test"
+    "test-chrome-all": "testcafe chrome ./page_model/test",
+    "test-chrome-all-json-reporter": "testcafe chrome ./page_model/test --reporter json > report.json"
+  
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/ViriNapoles/wlacademy-qafrontend#readme",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "testcafe-reporter-json": "^2.2.0"
   }
 }
