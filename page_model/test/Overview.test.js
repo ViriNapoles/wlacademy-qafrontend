@@ -1,15 +1,13 @@
-import LoginPage from '../pages/LoginPage'
-import CREDENTIALS from '../data/Constants'
 import ProductsPage from '../pages/ProductsPage'
 import ShoppingCart from '../pages/ShoppingCartPage'
 import CheckOutInformation from '../pages/CheckOutInformationPage'
 import CheckOutOverview from '../pages/CheckOutOverviewPage'
 import FinishedPurchase from '../pages/FinishPage'
+import { validUser } from '../data/Roles'
 
 fixture('Checkout information fields')
-    .page`https://www.saucedemo.com/`
     .beforeEach(async t =>{
-        await LoginPage.userLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
+        await t.useRole(validUser)
         await ProductsPage.addItem(0)
         await t.navigateTo('https://www.saucedemo.com/cart.html')
     })
