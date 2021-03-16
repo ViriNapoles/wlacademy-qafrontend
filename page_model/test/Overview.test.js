@@ -4,6 +4,7 @@ import ProductsPage from '../pages/ProductsPage'
 import ShoppingCart from '../pages/ShoppingCartPage'
 import CheckOutInformation from '../pages/CheckOutInformationPage'
 import CheckOutOverview from '../pages/CheckOutOverviewPage'
+import FinishedPurchase from '../pages/FinishPage'
 
 fixture('Checkout information fields')
     .page`https://www.saucedemo.com/`
@@ -11,16 +12,16 @@ fixture('Checkout information fields')
         await LoginPage.userLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
         await ProductsPage.addItem(0)
         await t.navigateTo('https://www.saucedemo.com/cart.html')
-        await t.expect(ShoppingCart.pageTitle.exists).ok()
-        await t.click(ShoppingCart.checkoutButton)
     })
 
-test('Missing information chekout message', async t =>{
-    await CheckOutInformation.fillUserInformation()
-    await t.expect(CheckOutInformation.errorMessage.exists).ok()
+test('Validate items in cart and overview', async t =>{
+    await t.click(ShoppingCart.checkoutButton)
+    await CheckOutInformation.fillUserInformation('Viri', 'Napoles', '77533')
+    await CheckOutOverview.validateItem(0)
 })
 
-test('Fill user information checkout', async t =>{
-    await CheckOutInformation.fillUserInformation('Viri', 'Napoles', '77533')
-    await t.expect(CheckOutOverview.pageTitle.exists).ok()
+test('Complete a purchase', async t =>{
+    await CheckOutOverview.validateItem(0)
+    await t.click(CheckOutOverview.finishButton)
+    await t.expect(FinishedPurchase.pageTitle.exists).ok()
 })
