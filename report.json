@@ -1,0 +1,135 @@
+{
+  "startTime": "2021-03-16T03:57:23.842Z",
+  "endTime": "2021-03-16T03:57:46.565Z",
+  "userAgents": [
+    "Chrome 89.0.4389.90 / macOS 10.15.5"
+  ],
+  "passed": 10,
+  "total": 10,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "Adding items to the shopping cart",
+      "path": "/Users/virinapoles/Desktop/automation-workshop/assesments/wlacademy-qafrontend/page_model/test/AddingItems.test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "Add a single item to the shopping cart",
+          "meta": {},
+          "errs": [],
+          "durationMs": 4179,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "Add multiple items to the shopping cart",
+          "meta": {},
+          "errs": [],
+          "durationMs": 3653,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Checkout information fields",
+      "path": "/Users/virinapoles/Desktop/automation-workshop/assesments/wlacademy-qafrontend/page_model/test/CheckoutInformation.test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "Missing information chekout message",
+          "meta": {},
+          "errs": [],
+          "durationMs": 1762,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "Fill user information checkout",
+          "meta": {},
+          "errs": [],
+          "durationMs": 2752,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Login page testing",
+      "path": "/Users/virinapoles/Desktop/automation-workshop/assesments/wlacademy-qafrontend/page_model/test/Login.test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "Login with valid credentials",
+          "meta": {},
+          "errs": [],
+          "durationMs": 724,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "Login with invalid credentials",
+          "meta": {},
+          "errs": [],
+          "durationMs": 1674,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Logout page testing",
+      "path": "/Users/virinapoles/Desktop/automation-workshop/assesments/wlacademy-qafrontend/page_model/test/Logout.test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "Logout from products page",
+          "meta": {},
+          "errs": [],
+          "durationMs": 1594,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Checkout information fields",
+      "path": "/Users/virinapoles/Desktop/automation-workshop/assesments/wlacademy-qafrontend/page_model/test/Overview.test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "Validate items in cart and overview",
+          "meta": {},
+          "errs": [],
+          "durationMs": 3193,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "Complete a purchase",
+          "meta": {},
+          "errs": [],
+          "durationMs": 2161,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Shopping cart page testing",
+      "path": "/Users/virinapoles/Desktop/automation-workshop/assesments/wlacademy-qafrontend/page_model/test/ShoppingCart.test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "Navigate to the shopping cart",
+          "meta": {},
+          "errs": [],
+          "durationMs": 945,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

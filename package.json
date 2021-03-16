@@ -1,0 +1,26 @@
+{
+  "name": "wlacademy-qafrontend",
+  "version": "1.0.0",
+  "description": "Assesment 1 - TestCafe",
+  "main": "index.js",
+  "scripts": {
+    "test-chrome-all": "testcafe chrome ./page_model/test",
+    "test-chrome-all-json-reporter": "testcafe chrome ./page_model/test --reporter json > report.json",
+    "test-multiple-browsers": "testcafe safari,chrome ./page_model/test",
+    "test-safari-all": "testcafe safari ./page_model/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViriNapoles/wlacademy-qafrontend.git"
+  },
+  "author": "viri_napoles@hotmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViriNapoles/wlacademy-qafrontend/issues"
+  },
+  "homepage": "https://github.com/ViriNapoles/wlacademy-qafrontend#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "testcafe-reporter-json": "^2.2.0"
+  }
+}
